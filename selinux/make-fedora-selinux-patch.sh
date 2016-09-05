@@ -29,7 +29,7 @@ REBASEDIR=`mktemp -d rebase.XXXXXX`
 
 pushd $REBASEDIR
 
-git clone $REPO
+git clone $REPO selinux
 
 pushd selinux
 git checkout $BRANCH
