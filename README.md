@@ -15,7 +15,7 @@ With non-default values:
 
 ### Variables
 * VERSION - release version
- * VERSION=2.5
+ * VERSION=2.6
 * REPO    - a repository to create a patch from
  * REPO=https://github.com/fedora-selinux/selinux
 * BRANCH  - a branch in the repository
