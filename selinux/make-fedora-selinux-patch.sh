@@ -21,6 +21,7 @@ EOF
 fi
 
 PACKAGE=$1
+PACKAGE_SUBDIR=${PACKAGE#selinux-}
 VERSION=${VERSION:-2.7}
 REPO=${REPO:-https://github.com/fedora-selinux/selinux}
 BRANCH=${BRANCH:-master}
@@ -41,7 +42,7 @@ tar xfz ../$PACKAGE-$VERSION.tar.gz
 
 pushd $PACKAGE-$VERSION
 git init; git add .; git commit -m "init"
-cp -r ../selinux/$PACKAGE/* .
+cp -r ../selinux/$PACKAGE_SUBDIR/* .
 git add -A .
 git diff --cached --src-prefix=$PACKAGE-$VERSION/ --dst-prefix=$PACKAGE-$VERSION/ > ../../$PACKAGE-fedora.patch
 popd
