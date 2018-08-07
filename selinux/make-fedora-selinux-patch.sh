@@ -22,7 +22,7 @@ fi
 
 PACKAGE=$1
 PACKAGE_SUBDIR=${PACKAGE#selinux-}
-VERSION=${VERSION:-2.7}
+VERSION=${VERSION:-2.8}
 REPO=${REPO:-https://github.com/fedora-selinux/selinux}
 BRANCH=${BRANCH:-master}
 
