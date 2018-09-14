@@ -44,7 +44,7 @@ pushd $PACKAGE-$VERSION
 git init; git add .; git commit -m "init"
 cp -r ../selinux/$PACKAGE_SUBDIR/* .
 git add -A .
-git diff --cached --src-prefix=$PACKAGE-$VERSION/ --dst-prefix=$PACKAGE-$VERSION/ > ../../$PACKAGE-fedora.patch
+git diff --cached --src-prefix=$PACKAGE-$VERSION/ --dst-prefix=$PACKAGE-$VERSION/ -- ':!*.po' ':!*pot' > ../../$PACKAGE-fedora.patch
 popd
 
 popd
